@@ -1,0 +1,49 @@
+
+
+# Create an API (Node.js) where we stablish connection into LocalHost and request data
+
+
+1 - Create Server and open port with express
+
+2 - Stablish express.static and the folder we want to use
+
+# RestFull API:
+- http://flowersapi.com/about/
+
+Words between slashes doesn't have to mean directories, they can mean routes
+
+- flowerapi.com/search/sunflower/
+
+Manage and set up routes
+
+3 - Manage get Requests (app.get('route', 'function'))
+
+# addWord - (Need to make it persistance) adds the specified word on URL on our Dict
+# sendAll - sends the words variable
+# searchWord - looks for the specified word and it responses if it founded or not.
+
+4 - Persistance 
+
+# Import file with fs library, data = fs.readFileSync('words.json');
+# Parse raw data, wordsDict = JSON.parse(data)
+# Add new word and price into wordsDict, wordsDict[word] = price;
+# Parse wordDicts into JSON, JSON.stringfy(wordsDict, null, 2)
+# Export data into JSON file, fs.writeFile('words.json', wordsDict, callback(err){});
+
+
+5 - Frond End Client
+
+#  Import p5.js on website
+#  Load JSON data from JSON file stored in /All, loadJSON('/all', gotData);
+#  Submit input text in index.html to wods.json via sketch.js, submitWord();
+#  Add submited text via loadJSON('add/' + word + '/' + price, function finished(data){});
+
+
+6 - Using POST request
+
+# POST security is to hide data, security
+# POST to media, upload large data...
+# index.html analyze will include POST request, same with analyzeThis on sketch.js and server.js
+# need to parse POST data to extract the fields we want, (body-parser)
+# parse app with urlencoded, parse app/json
+

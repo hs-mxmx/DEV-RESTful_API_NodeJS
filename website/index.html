@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <script src="p5.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+          $('.showWords').show();
+          $('.showAnalyze').show();
+          $('.words').hide();
+          $('.analyze').hide();
+          $('.hideAnalyze').hide();
+          $('.hideWords').hide();
+        });
+
+        function showWords() {
+            $('.showWords').hide();
+            $('.words').show();
+            $('.hideWords').show();
+        } 
+
+        function hideWords(){
+            $('.showWords').show();
+            $('.words').hide();
+            $('.hideWords').hide();
+        }
+  
+        function showAnalyze() { 
+            $('.showAnalyze').hide();
+            $('.analyze').show();
+            $('.hideAnalyze').show();
+        } 
+
+        function hideAnalyze() {
+            $('.showAnalyze').show();
+            $('.analyze').hide();
+            $('.hideAnalyze').hide();
+        }
+    </script> 
+  </head>
+  <body>
+  <div class='words'>
+    <p>
+      word: <input id="word">
+      <br />
+      price: <input id="price">
+      <br />
+      <button id="submit">submit</button>
+    </p>
+  </div>
+  <div class='analyze'>
+    <p>
+      <textarea cols=40 rows=5 id="textinput"></textarea>
+      <button id="analyze">analyze</button>
+    </p>
+  </div>
+        <div class='hideWords'>
+          <button onclick="hideWords()"> 
+              Hide Data 
+          </button> 
+        </div>
+        <div class='showWords'>
+          <button onclick="showWords()"> 
+              Show Data 
+          </button> 
+        </div>
+
+        
+        <div class='hideAnalyze'>
+          <button onclick="hideAnalyze()"> 
+              Hide Analyze 
+          </button> 
+        </div>
+        <div class='showAnalyze'>
+          <button onclick="showAnalyze()"> 
+              Show Analyze 
+          </button> 
+        </div>
+        <div class='show'>
+          <button id="show"> 
+              Show Data 
+          </button> 
+        </div>
+
+  </body>
+</html>
